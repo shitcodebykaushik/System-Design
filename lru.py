@@ -52,7 +52,7 @@ class LRUCache:
         new_node = Node(key, value)
         self.cache[key] = new_node
         self._insert_front(new_node)
-
+        """Here we have used  prefix _ to indicate that method is intended for the internal use inside the class only"""
         # Eviction logic if we exceed capacity
         if len(self.cache) > self.capacity:
             # The LRU node is the one right before the dummy tail
